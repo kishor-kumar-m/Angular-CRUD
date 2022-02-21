@@ -1,0 +1,41 @@
+{
+  "productList": [
+    {
+      "productName": "Samsung",
+      "category": "Electronics",
+      "freshness": "Second Hand",
+      "price": 23000,
+      "comment": "Excellent",
+      "date": "2022-02-15T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Sony",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 12500,
+      "comment": "Top Class",
+      "date": "2022-02-17T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Apple",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 12500,
+      "comment": "good",
+      "date": "2022-02-10T18:30:00.000Z",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
