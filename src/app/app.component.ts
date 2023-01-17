@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class AppComponent implements OnInit {
   title = 'Crud';
-  displayedColumns: string[] = ['productName', 'category', 'freshness', 'date' , 'price','comment','action'];
+  displayedColumns: string[] = ['firstName', 'lastName', 'email', 'salary' ,'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,8 +38,9 @@ export class AppComponent implements OnInit {
   getAllProducts(){
     this.api.getProduct()
     .subscribe({
-      next :(res)=>{
-       this.dataSource = new MatTableDataSource(res);
+      next: (res) => {
+       console.log(res);        
+       this.dataSource = new MatTableDataSource(res.data);
        this.dataSource.paginator = this.paginator;
        this.dataSource.sort = this.sort;
       },error :(err) =>{
@@ -57,7 +58,7 @@ export class AppComponent implements OnInit {
         }
       })
     }
-    deleteProduct(id:number){
+    deleteProduct(id:any){
       this.api.deleteProduct(id)
       .subscribe({
         next :(res)=>{

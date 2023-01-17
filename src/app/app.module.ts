@@ -51,3 +51,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+
+
+// json-server --watch db.json
